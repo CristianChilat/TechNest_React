@@ -1,0 +1,124 @@
+footer {
+    background: linear-gradient(to bottom, #1e293b, #0f172a);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    padding: 2em 4em;
+    color: white;
+}
+
+.mainContentContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.leftSide {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.logoContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+
+}
+
+.logoContainer img {
+    width: 4.5em;
+    border-radius: 1em;
+}
+
+.quote {
+    opacity: 0.7;
+}
+
+.socialMediasContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.socialMediasContainer div {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+.socialMediasContainer svg {
+    fill: white;
+    width: 1em;
+    height: 1em;
+}
+
+.middleSide {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10em;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+@keyframes highlightLinks {
+    from {
+        color: white;
+        opacity: 0.6;
+    }
+    to {
+        color: #f97316;
+        opacity: 1;
+
+    }
+}
+
+@keyframes unhighlightLinks {
+    from {
+        color: #f97316;
+        opacity: 1;
+    }
+    to {
+        color: white;
+        opacity: 0.6;
+    }
+}
+
+.links div:hover {
+    cursor: pointer;
+    animation: highlightLinks 0.5s forwards;
+}
+
+.links div:not(:hover) {
+    animation: unhighlightLinks 0.2s forwards;
+}
+
+.links div, .rightSide div div span{
+    opacity: 0.6;
+}
+
+.rightSide {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.copyRightContainer {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.57);
+}

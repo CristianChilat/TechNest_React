@@ -1,10 +1,10 @@
 import styles from './navBar.module.css';
-import logo from '../../../assets/logoTechNest.png'
-import profileIcon from '../../../assets/profileButtonIcon.svg'
-import cartIcon from '../../../assets/cartButtonIcon.svg'
-import promoIcon from '../../../assets/promoButtonIcon.svg'
-import burgerMenuIcon from '../../../assets/burgerMenuButtonIcon.svg'
-import searchIcon from '../../../assets/searchButtonIcon.svg'
+import logo from '../../../assets/navBarIcons/logoTechNest.png'
+import profileIcon from '../../../assets/navBarIcons/profileButtonIcon.svg'
+import cartIcon from '../../../assets/navBarIcons/cartButtonIcon.svg'
+import promoIcon from '../../../assets/navBarIcons/promoButtonIcon.svg'
+import burgerMenuIcon from '../../../assets/navBarIcons/burgerMenuButtonIcon.svg'
+import searchIcon from '../../../assets/navBarIcons/searchButtonIcon.svg'
 
 function NavBar() {
 	return (
