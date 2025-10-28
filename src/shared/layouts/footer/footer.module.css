@@ -49,6 +49,12 @@ footer {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 0.5em;
     border-radius: 0.5em;
+    transition: background-color 0.15s linear;
+}
+
+.socialMediasContainer div:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .socialMediasContainer svg {
@@ -118,7 +124,21 @@ footer {
     gap: 1em;
 }
 
+.rightSide .contentContainer div{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
 .copyRightContainer {
     width: 100%;
     border-top: 1px solid rgba(255, 255, 255, 0.57);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+.copyRightText {
+    opacity: 0.6;
 }

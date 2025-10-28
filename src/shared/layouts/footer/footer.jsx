@@ -79,7 +79,9 @@ function Footer() {
 				</div>
 			</div>
 			<div className={styles.copyRightContainer}>
-
+				<div className={styles.copyRightText}>
+					&copy; 2025 TechNest. All rights reserved.
+				</div>
 			</div>
 		</footer>
 	)
