@@ -1,0 +1,52 @@
+.carouselContainer {
+    overflow: hidden;
+    background-color: #f97316;
+    margin: 3em 5em;
+    position: relative;
+    padding: 3em 0;
+    border-radius: 10px;
+}
+
+.viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slideContainer {
+    display: flex;
+    height: 10em;
+    backface-visibility: hidden;
+}
+
+.slide {
+    flex: 0 0 90%;
+    margin: 0 5%;
+    min-width: 0;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.controlButton {
+    background: none;
+    border: none;
+    padding: 0;
+    width: fit-content;
+    position: absolute;
+    top: 50%;
+    font-size: 2em;
+}
+
+.controlButton:hover {
+    cursor: pointer;
+}
+
+.prevButton {
+    left: 2.5%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.nextButton {
+    right: 2.5%;
+    transform: translateY(-50%) translateX(50%);
+}
