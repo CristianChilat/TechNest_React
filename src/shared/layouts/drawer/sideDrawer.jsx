@@ -18,16 +18,15 @@ function SideDrawer({ open, onClose }) {
         'Smartphones': <SmartphoneIcon sx={{ color: 'black' }} />,
         'Computer Details': <DesktopWindowsOutlinedIcon color="black" />,
         'Gadgets': <WatchOutlinedIcon sx={{color: 'black'}} />,
-        'Drafts': 'a'
     };
 
     const getIcon = (text) => iconMapping[text] || null;
 
-
     const DrawerContent = (
         <Box sx={{ width: 250 }} role="presentation" onClick={onClose}>
             <List>
-                {['Smartphones', 'Computer Details', 'Gadgets', 'Drafts'].map((text) => (
+                {"Personal techs"}
+                {['Smartphones', 'Computer Details', 'Gadgets'].map((text) => (
                     <ListItem key={text} disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
