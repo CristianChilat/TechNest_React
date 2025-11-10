@@ -1,13 +1,15 @@
 import styles from './carousel.module.css'
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from 'embla-carousel-autoplay'
-import React, { useCallback } from 'react'
+import React, {useCallback} from 'react'
+import imagesData from "./imagesData";
+
 function Carousel() {
 	const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
-    align: 'center',
-    containScroll: 'trimSnaps'
-}, [Autoplay()]);
+		loop: true,
+		align: 'center',
+		containScroll: 'trimSnaps'
+	}, [Autoplay()]);
 
 	const scrollPrev = useCallback(() => {
 		if (emblaApi) emblaApi.scrollPrev()
@@ -17,20 +19,16 @@ function Carousel() {
 		if (emblaApi) emblaApi.scrollNext()
 	}, [emblaApi])
 
-
 	return (
 		<div className={styles.carouselContainer}>
-			<div className={styles.viewport}  ref={emblaRef}>
+			<div className={styles.viewport} ref={emblaRef}>
 				<div className={styles.slideContainer}>
-					<div className={styles.slide}>
 
-					</div>
-					<div className={styles.slide}>
-
-					</div>
-					<div className={styles.slide}>
-
-					</div>
+					{imagesData.map((image, index) => (
+						<div className={styles.slide} key={index}>
+							<img src={image} alt={image.alt} />
+						</div>
+					))}
 				</div>
 			</div>
 			<div className={[styles.prevButton, styles.controlButton].join(' ')} onClick={scrollPrev}>
@@ -40,6 +38,7 @@ function Carousel() {
 				&rarr;
 			</div>
 		</div>
+
 	)
 }
 
