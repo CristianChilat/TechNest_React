@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './navBar.module.css';
 import logo from '../../../assets/navBarIcons/logoTechNest.png'
-import profileIcon from '../../../assets/navBarIcons/profileButtonIcon.svg'
-import cartIcon from '../../../assets/navBarIcons/cartButtonIcon.svg'
-import promoIcon from '../../../assets/navBarIcons/promoButtonIcon.svg'
+import DiscountOutlinedIcon from '@mui/icons-material/DiscountOutlined';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import SideDrawer from '../drawer/sideDrawer';
-import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import TextField from '@mui/material/TextField';
 
 function NavBar() {
@@ -45,7 +45,7 @@ function NavBar() {
                                 },
                                 '&.Mui-focused': {
                                     '& .MuiOutlinedInput-notchedOutline': {
-                                        backgroundColor: 'rgba(255, 255, 255, 0.1)', // White background on focus
+                                        backgroundColor: 'rgba(255, 255, 255, 0.05)', // White background on focus
                                     }
                                 },
                                 '&.Mui-focused fieldset': {
@@ -69,22 +69,22 @@ function NavBar() {
                 </Box>
                 <div>
                     <button className={styles.buttons}>
-                        <img src={profileIcon} alt=""/>
+                        <AccountCircleOutlinedIcon fontSize="large" />
                     </button>
                 </div>
                 <div>
                     <button className={styles.buttons}>
-                        <img src={cartIcon} alt=""/>
+                        <ShoppingCartOutlinedIcon fontSize="large" />
                     </button>
                 </div>
                 <div>
                     <button className={styles.buttons}>
-                        <img src={promoIcon} alt=""/>
+                        <DiscountOutlinedIcon fontSize="large" />
                     </button>
                 </div>
                 <div>
                     <Button onClick={toggleDrawer(true)} className={styles.buttons}>
-                        <MenuOutlinedIcon sx={{ color: 'black' }} />
+                        <MenuOutlinedIcon fontSize='large' sx={{ color: 'black' }} />
                     </Button>
                     <SideDrawer open={open} onClose={toggleDrawer(false)} />
                 </div>

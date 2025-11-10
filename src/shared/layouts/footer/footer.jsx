@@ -1,12 +1,12 @@
 import styles from './footer.module.css';
 import logo from '../../../assets/navBarIcons/logoTechNest.png'
-import {ReactComponent as FacebookIcon} from '../../../assets/socialMedias/facebookIcon.svg';
-import {ReactComponent as TwitterIcon} from '../../../assets/socialMedias/twitterIcon.svg';
-import {ReactComponent as InstagramIcon} from '../../../assets/socialMedias/instagramIcon.svg';
-import {ReactComponent as YoutubeIcon} from '../../../assets/socialMedias/youtubeIcon.svg';
-import {ReactComponent as PhoneIcon} from '../../../assets/contactIcons/phoneIcon.svg';
-import {ReactComponent as GeoIcon} from '../../../assets/contactIcons/geoIcon.svg';
-import {ReactComponent as MailIcon} from '../../../assets/contactIcons/mailIcon.svg';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import XIcon from '@mui/icons-material/X';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import CallOutlinedIcon from '@mui/icons-material/CallOutlined';
+import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
+import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 
 function Footer() {
 	return (
@@ -23,16 +23,16 @@ function Footer() {
 					</div>
 					<div className={styles.socialMediasContainer}>
 						<div>
-							<FacebookIcon/>
+							<FacebookIcon fontSize='small' />
 						</div>
 						<div>
-							<TwitterIcon/>
+							<XIcon fontSize='small' />
 						</div>
 						<div>
-							<InstagramIcon/>
+							<InstagramIcon fontSize='small' />
 						</div>
 						<div>
-							<YoutubeIcon/>
+							<YouTubeIcon fontSize='small' />
 						</div>
 					</div>
 				</div>
@@ -64,15 +64,15 @@ function Footer() {
 					<div>Contact us</div>
 					<div className={styles.contentContainer}>
 						<div>
-							<GeoIcon />
+							<PlaceOutlinedIcon />
 							<span> 123 Tech Street, Silicon Valley, CA 94025</span>
 				 		</div>
 						<div>
-							<PhoneIcon />
+							<CallOutlinedIcon />
 							<span> +1 (555) 123-4567</span>
 						</div>
 						<div>
-							<MailIcon />
+							<EmailOutlinedIcon />
 							<span> support@technest.com</span>
 						</div>
 					</div>
