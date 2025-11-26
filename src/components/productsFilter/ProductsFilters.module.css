@@ -1,0 +1,32 @@
+* {
+    color: black;
+}
+
+.filterContainer {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    padding: 2em;
+    border-radius: 10px;
+    width: fit-content;
+    min-width: 20em;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.filterResetButton {
+    color: red;
+    font-size: 1.2em;
+    padding: 0.5em;
+    border-radius: 5px;
+}
+
+.filterResetButton:hover {
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.priceRangeLabel {
+    font-weight: bold;
+}

@@ -1,3 +1,15 @@
 * {
   font-weight: 600;
 }
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+    align-items: center;
+    margin: 5em 0;
+}
+
+section {
+    width: 80%;
+}
