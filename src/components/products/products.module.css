@@ -9,8 +9,7 @@ h3, h4 {
 .productBadge {
     position: absolute;
     top: 1em;
-
-    padding: 0.3em;
+    padding: 0.3em 0.6em;
     border-radius: 10px;
     color: white;
     font-size: 0.9em;
