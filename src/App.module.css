@@ -13,3 +13,9 @@ main {
 section {
     width: 80%;
 }
+
+.productsAndFilterContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+}

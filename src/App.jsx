@@ -1,7 +1,9 @@
-import './App.css';
+import styles from './App.module.css';
 import Layout from "./shared/layouts";
 import Carousel from "./components/carousel/carousel.jsx";
 import ProductsFilter from "./components/productsFilter/ProductsFilter";
+import Products from "./components/products/Products";
+
 
 function App() {
   return (
@@ -11,8 +13,9 @@ function App() {
             <section>
                 <Carousel />
             </section>
-	        <section>
-<ProductsFilter />
+	        <section className={styles.productsAndFilterContainer}>
+				<ProductsFilter />
+		        <Products />
 	        </section>
         </main>
        </Layout>

@@ -4,7 +4,7 @@
     border-radius: 10px;
     width: fit-content;
     min-width: 20em;
-
+    height: fit-content;
 }
 
 .label {

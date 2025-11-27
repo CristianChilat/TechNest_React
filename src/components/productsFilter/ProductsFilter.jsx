@@ -30,6 +30,22 @@ const marks = [
 	},
 ];
 
+const brands = [
+	"TechCorp",
+	"SmartDevices",
+	"GamerPro",
+	"AudioMax",
+	"HomeComfort"
+];
+
+const categories = [
+	"Computer Components",
+	"Phones & Tablets",
+	"Audio & Video",
+	"Gaming",
+	"Household Appliances"
+];
+
 function valuetext(value) {
 	return `${value}$`;
 }
@@ -96,11 +112,9 @@ function ProductsFilter() {
 					</div>
 					<div>
 						<FormGroup>
-							<FormControlLabel control={<Checkbox />} label="Computer Components" />
-							<FormControlLabel control={<Checkbox />} label="Phones & Tablets" />
-							<FormControlLabel control={<Checkbox />} label="Audio & Video" />
-							<FormControlLabel control={<Checkbox />} label="Gaming" />
-							<FormControlLabel control={<Checkbox />} label="Household Appliances" />
+							{categories.map((brand, index) => (
+								<FormControlLabel control={<Checkbox />} label={brand} key={index} />
+							))}
 						</FormGroup>
 					</div>
 				</Item>
@@ -110,11 +124,9 @@ function ProductsFilter() {
 					</div>
 					<div>
 						<FormGroup>
-							<FormControlLabel control={<Checkbox />} label="TechCorp" />
-							<FormControlLabel control={<Checkbox />} label="SmartDevices" />
-							<FormControlLabel control={<Checkbox />} label="GamerPro" />
-							<FormControlLabel control={<Checkbox />} label="AudioMax" />
-							<FormControlLabel control={<Checkbox />} label="HomeComfort" />
+							{brands.map((brand, index) => (
+								<FormControlLabel control={<Checkbox />} label={brand} key={index} />
+							))}
 						</FormGroup>
 					</div>
 				</Item>
