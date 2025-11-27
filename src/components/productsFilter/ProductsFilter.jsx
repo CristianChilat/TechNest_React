@@ -4,14 +4,16 @@ import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Slider from '@mui/material/Slider';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox'
 
 const Item = styled(Paper)(({ theme }) => ({
 	backgroundColor: '#fff',
 	...theme.typography.body2,
 	padding: theme.spacing(2),
 	textAlign: 'start',
-
-	color: (theme.vars ?? theme).palette.text.secondary,
+	color: 'black',
 	...theme.applyStyles('dark', {
 		backgroundColor: '#1A2027',
 	}),
@@ -58,30 +60,69 @@ function ProductsFilter() {
 					}}
 				>
 					<div className={styles.label}>Filters</div>
-					<div className={styles.filterResetButton}>Reset</div>
+					<div className={styles.resetButton}>Reset</div>
 				</Item>
 				<Item
 					sx={{
 						display: "flex",
-						flexDirection: "column",
+						flexWrap: "wrap",
+						flexDirection: "row",
+						justifyContent: "space-between",
+						alignItems: "center",
 						gap: "1em"
 					}}
 				>
 					<div className={[styles.priceRangeLabel, styles.label].join(' ')}>Price range</div>
-					<Slider
-						getAriaLabel={() => 'Price range'}
-						value={value}
-						onChange={handleChange}
-						valueLabelDisplay="auto"
-						getAriaValueText={valuetext}
-						marks={marks}
-						max={2000}
-						sx={{
-							color: 'black',
-							width: '90%',
-							alignSelf: 'center'
-						}}
-					/>
+					<div className={styles.resetButton}>Reset</div>
+					<div className={styles.sliderContainer}>
+						<Slider
+							getAriaLabel={() => 'Price range'}
+							value={value}
+							onChange={handleChange}
+							valueLabelDisplay="auto"
+							getAriaValueText={valuetext}
+							marks={marks}
+							max={2000}
+							sx={{
+								color: 'black',
+								width: '90%'
+							}}
+						/>
+					</div>
+				</Item>
+				<Item>
+					<div className={styles.label}>
+						Category
+					</div>
+					<div>
+						<FormGroup>
+							<FormControlLabel control={<Checkbox />} label="Computer Components" />
+							<FormControlLabel control={<Checkbox />} label="Phones & Tablets" />
+							<FormControlLabel control={<Checkbox />} label="Audio & Video" />
+							<FormControlLabel control={<Checkbox />} label="Gaming" />
+							<FormControlLabel control={<Checkbox />} label="Household Appliances" />
+						</FormGroup>
+					</div>
+				</Item>
+				<Item>
+					<div className={styles.label}>
+						Brand
+					</div>
+					<div>
+						<FormGroup>
+							<FormControlLabel control={<Checkbox />} label="TechCorp" />
+							<FormControlLabel control={<Checkbox />} label="SmartDevices" />
+							<FormControlLabel control={<Checkbox />} label="GamerPro" />
+							<FormControlLabel control={<Checkbox />} label="AudioMax" />
+							<FormControlLabel control={<Checkbox />} label="HomeComfort" />
+						</FormGroup>
+					</div>
+				</Item>
+				<Item>
+					<div className={styles.label}>
+						Availability
+					</div>
+					<FormControlLabel control={<Checkbox />} label="In stock only" />
 				</Item>
 			</Stack>
 		</div>
