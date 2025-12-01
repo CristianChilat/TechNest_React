@@ -10,8 +10,6 @@ import ListItemText from '@mui/material/ListItemText';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import DesktopWindowsOutlinedIcon from '@mui/icons-material/DesktopWindowsOutlined';
 import WatchOutlinedIcon from '@mui/icons-material/WatchOutlined';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 
 function SideDrawer({ open, onClose }) {
     const iconMapping = {
@@ -23,7 +21,11 @@ function SideDrawer({ open, onClose }) {
     const getIcon = (text) => iconMapping[text] || null;
 
     const DrawerContent = (
-        <Box sx={{ width: 250 }} role="presentation" onClick={onClose}>
+        <Box
+	        sx={{ width: 250 }}
+	        role="presentation"
+	        onClick={onClose}
+        >
             <List>
                 {"Personal techs"}
                 {['Smartphones', 'Computer Details', 'Gadgets'].map((text) => (
@@ -38,23 +40,15 @@ function SideDrawer({ open, onClose }) {
                 ))}
             </List>
             <Divider />
-            <List>
-                {[].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
         </Box>
     );
 
     return (
-        <Drawer open={open} onClose={onClose}>
+        <Drawer
+	        open={open}
+	        onClose={onClose}
+            anchor="right"
+        >
             {DrawerContent}
         </Drawer>
     );
