@@ -9,6 +9,8 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import SideDrawer from '../drawer/sideDrawer';
 import TextField from '@mui/material/TextField';
+import {Link} from 'react-router';
+
 
 function NavBar() {
     const [open, setOpen] = React.useState(false);
@@ -62,32 +64,30 @@ function NavBar() {
                                 color: 'black',
                                 position: 'relative',
                                 zIndex: 1,
+	                            height: '50%',
                             },
                             borderRadius: '8px',
+
                         }}
                     />
                 </Box>
-                <div>
+	            <Link to="/profile">
+
                     <button className={styles.buttons}>
                         <AccountCircleOutlinedIcon fontSize="large" />
                     </button>
-                </div>
-                <div>
+	            </Link>
+
                     <button className={styles.buttons}>
                         <ShoppingCartOutlinedIcon fontSize="large" />
                     </button>
-                </div>
-                <div>
                     <button className={styles.buttons}>
                         <DiscountOutlinedIcon fontSize="large" />
                     </button>
-                </div>
-                <div>
                     <Button onClick={toggleDrawer(true)} className={styles.buttons}>
                         <MenuOutlinedIcon fontSize='large' sx={{ color: 'black' }} />
                     </Button>
                     <SideDrawer open={open} onClose={toggleDrawer(false)} />
-                </div>
             </div>
         </nav>
     );

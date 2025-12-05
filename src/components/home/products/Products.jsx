@@ -19,23 +19,31 @@ function Products() {
 			</div>
 			<div>
 				<Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-					{productsData.map((_, index) => (
+					{productsData.map((product, index) => (
 						<Grid key={index} size={{ xs: 10, sm: 10, md: 4 }}>
 							<Card
 								sx={{
 									position: 'relative',
 								}}
+								className={!product.inStock ? styles.disabledProduct : ''}
 							>
-								{productsData[index].isNew && (
-									<div className={styles.productBadge} style={{backgroundColor: '#f97316', left: '1em'}}>New</div>
-								)}
-								{productsData[index].discount && (
-									<div className={styles.productBadge} style={{backgroundColor: '#f93816', right: '1em'}}>-{productsData[index].discount}%</div>
-								)}
 								<CardMedia
-									sx={{ height: '15em' }}
-									image={productsData[index].image}
-								/>
+									sx={{
+										height: '15em',
+										position: 'relative',
+									}}
+									image={product.image}
+								>
+									{product.isNew && (
+										<div className={styles.productBadge} style={{backgroundColor: '#f97316', left: '1em'}}>New</div>
+									)}
+									{product.discount && (
+										<div className={styles.productBadge} style={{backgroundColor: '#f93816', right: '1em'}}>-{product.discount}%</div>
+									)}
+									{!product.inStock && (
+										<div className={styles.outOfStockLabel}>Out of stock</div>
+									)}
+								</CardMedia>
 								<CardContent
 									sx={{
 										minHeight: '10em',
@@ -45,18 +53,18 @@ function Products() {
 									}}
 								>
 									<div>
-										<h3>{productsData[index].name}</h3>
-										<h4 className={styles.productCategoryLabel}>{productsData[index].category}</h4>
+										<h3>{product.name}</h3>
+										<h4 className={styles.productCategoryLabel}>{product.category}</h4>
 										<div className={styles.ratingAndReviewContainer}>
 											<StarIcon sx={{ color: '#f97316' }} />
-											<div>{productsData[index].rating}</div>
-											<div style={{opacity: 0.6}}>({productsData[index].reviews})</div>
+											<div>{product.rating}</div>
+											<div style={{opacity: 0.6}}>({product.reviews})</div>
 										</div>
 									</div>
 									<div className={styles.priceContainer}>
-										<div>{productsData[index].price}$</div>
-										{productsData[index].originalPrice && (
-											<div style={{opacity: 0.6, textDecoration: "line-through"}}>{productsData[index].originalPrice}$</div>
+										<div>{product.price}$</div>
+										{product.originalPrice && (
+											<div style={{opacity: 0.6, textDecoration: "line-through"}}>{product.originalPrice}$</div>
 										)}
 
 									</div>
@@ -69,7 +77,10 @@ function Products() {
 											color: 'white',
 											width: '100%',
 											padding: '0.5em 0',
+											disabled: product.inStock,
+											cursor: !product.inStock ? 'default' : 'pointer',
 										}}
+
 									>
 										<ShoppingCartOutlinedIcon />
 										Add to card

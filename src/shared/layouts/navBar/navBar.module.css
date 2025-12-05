@@ -8,7 +8,7 @@ nav {
 }
 
 .mainLogo {
-    width: 100px;
+    width: 80px;
     border-radius: 30%;
 }
 
@@ -19,7 +19,7 @@ nav {
     align-items: center;
     gap: 1em;
     width: fit-content;
-    padding: 1em;
+    padding: 0.5em 1em;
 }
 
 .buttonsSideContainer {
@@ -37,7 +37,7 @@ nav {
     background: none;
     border-radius: 30%;
     aspect-ratio: 1;
-    padding: 1em;
+    padding: 0.5em;
     transition: background-color 0.15s linear;
 }
 
@@ -47,5 +47,5 @@ nav {
 }
 
 .buttons img {
-    width: 2em;
+    width: 1.5em;
 }
