@@ -35,10 +35,10 @@ function Products() {
 									}}
 									image={product.image}
 								>
-									{product.isNew && (
+									{product.isNew && product.inStock && (
 										<div className={styles.productBadge} style={{backgroundColor: '#f97316', left: '1em'}}>New</div>
 									)}
-									{product.discount && (
+									{product.discount && product.inStock && (
 										<div className={styles.productBadge} style={{backgroundColor: '#f93816', right: '1em'}}>-{product.discount}%</div>
 									)}
 									{!product.inStock && (
@@ -64,7 +64,7 @@ function Products() {
 									</div>
 									<div className={styles.priceContainer}>
 										<div>{product.price}$</div>
-										{product.originalPrice && (
+										{product.originalPrice && product.inStock && (
 											<div style={{opacity: 0.6, textDecoration: "line-through"}}>{product.originalPrice}$</div>
 										)}
 
