@@ -21,10 +21,10 @@ function NavBar() {
 
     return (
         <nav>
-            <div className={styles.logoSideContainer}>
-                <img className={styles.mainLogo} src={logo} alt="No logo :(" draggable={false}/>
-                <h1>TechNest</h1>
-            </div>
+	        <Link to="/" className={styles.logoSideContainer}>
+		        <img className={styles.mainLogo} src={logo} alt="No logo :(" draggable={false}/>
+		        <h1>TechNest</h1>
+	        </Link>
             <div className={styles.buttonsSideContainer}>
                 <Box
                     component="form"
@@ -34,9 +34,9 @@ function NavBar() {
                     noValidate
                     autoComplete = "on"
                 >
-                    <TextField 
-                        id="outlined-basic" 
-                        label="Search" 
+                    <TextField
+                        id="outlined-basic"
+                        label="Search"
                         variant="outlined"
                         sx={{
                             '& .MuiOutlinedInput-root': {
@@ -71,7 +71,7 @@ function NavBar() {
                         }}
                     />
                 </Box>
-	            <Link to="/profile">
+	            <Link to="profile">
                     <button className={styles.buttons}>
                         <AccountCircleOutlinedIcon sx={{ fontSize: '2.5em' }} />
                     </button>
