@@ -5,10 +5,11 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 3em;
+
 }
 
 .mainLogo {
-    width: 80px;
+    width: 4em;
     border-radius: 30%;
 }
 
@@ -20,6 +21,10 @@ nav {
     gap: 1em;
     width: fit-content;
     padding: 0.5em 1em;
+}
+
+.logoSideContainer h1 {
+    margin: 0.4em 0;
 }
 
 .buttonsSideContainer {

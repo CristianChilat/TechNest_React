@@ -2,8 +2,20 @@ h3, h4 {
     margin: 0 0 0.5em;
 }
 
-.productsContainer {
-    width: 100%;
+@keyframes hoverProduct {
+    from {
+        box-shadow: none;
+        transform: scale(1);
+    }
+    to {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transform: scale(1.03);
+    }
+}
+
+.activeProduct:hover {
+    cursor: pointer;
+    animation: hoverProduct 0.2s forwards;
 }
 
 .productBadge {

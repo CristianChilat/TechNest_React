@@ -32,13 +32,17 @@
 }
 
 .controlButton {
-    background: none;
+    background: rgb(255, 255, 255);
     border: none;
     padding: 0;
-    width: fit-content;
+    text-align: center;
+    line-height: 1.5em;
     position: absolute;
     top: 50%;
     font-size: 2em;
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
 }
 
 .controlButton:hover {

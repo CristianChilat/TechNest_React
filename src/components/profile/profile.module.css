@@ -1,0 +1,32 @@
+.profileContainer {
+    border: 1px solid black;
+    padding: 1.5em;
+    border-radius: 10px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+}
+
+.content {
+    padding-top: 1em;
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+    justify-content: space-between;
+}
+
+.content form  {
+    width: 50%;
+}
+
+.content input {
+    width: 100%;
+}
+
+.navigation {
+
+}

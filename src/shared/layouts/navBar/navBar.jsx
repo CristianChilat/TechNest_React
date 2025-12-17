@@ -72,20 +72,18 @@ function NavBar() {
                     />
                 </Box>
 	            <Link to="/profile">
-
                     <button className={styles.buttons}>
-                        <AccountCircleOutlinedIcon fontSize="large" />
+                        <AccountCircleOutlinedIcon sx={{ fontSize: '2.5em' }} />
                     </button>
 	            </Link>
-
                     <button className={styles.buttons}>
-                        <ShoppingCartOutlinedIcon fontSize="large" />
+                        <ShoppingCartOutlinedIcon sx={{ fontSize: '2.5em' }} />
                     </button>
                     <button className={styles.buttons}>
-                        <DiscountOutlinedIcon fontSize="large" />
+                        <DiscountOutlinedIcon sx={{ fontSize: '2.5em' }} />
                     </button>
                     <Button onClick={toggleDrawer(true)} className={styles.buttons}>
-                        <MenuOutlinedIcon fontSize='large' sx={{ color: 'black' }} />
+                        <MenuOutlinedIcon  sx={{ color: 'black', fontSize: '2.5em' }} />
                     </Button>
                     <SideDrawer open={open} onClose={toggleDrawer(false)} />
             </div>

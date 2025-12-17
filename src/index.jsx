@@ -9,8 +9,8 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import Products from "./components/home/products/Products";
 import Home from "./components/home/index";
+import Profile from "./components/profile/profile"
 
 
 const router = createBrowserRouter([
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
 				index: true, element: <Home />,
 			},
 			{
-				path: 'profile', element: <Products />
+				path: 'profile', element: <Profile />
 			}
 		]
 	},
