@@ -8,15 +8,12 @@ import Button from '@mui/material/Button';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import StarIcon from '@mui/icons-material/Star';
 import productsData from "./productsData";
-import {Link} from 'react-router';
 
 function Products() {
 	return (
 		<div className={styles.productsContainer}>
 			<div className={styles.labelAndCountItemsContainer}>
 				<div>All products</div>
-				<div>Items count</div>
-				<Link to={"/"}>Home</Link>
 			</div>
 			<div>
 				<Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>

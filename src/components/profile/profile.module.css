@@ -21,12 +21,59 @@
 
 .content form  {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.content form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
 }
 
 .content input {
     width: 100%;
+    box-sizing: border-box;
+    font-size: 1.05em;
+    padding: 0.2em 0.5em;
 }
 
-.navigation {
+.inputInfoContainer {
+    display: flex;
+    flex-direction: row;
+}
 
+.inputInfoContainer input {
+    flex: 1;
+    min-width: 0;
+}
+
+.content button {
+    flex-shrink: 0;
+    width: fit-content;
+    text-wrap: nowrap;
+    background: #00b500;
+    color: white;
+    box-shadow: none;
+}
+
+.profileCategoryButton {
+    border-color: black !important;
+    color: black !important;
+}
+
+@keyframes Hover-Category-Button {
+    from {
+        background: white;
+        color: black;
+    }
+    to {
+        background-color: black;
+        color: white !important;
+    }
+}
+
+.profileCategoryButton:hover {
+    animation: Hover-Category-Button 0.2s forwards;
 }
