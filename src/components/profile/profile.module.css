@@ -61,19 +61,11 @@
 .profileCategoryButton {
     border-color: black !important;
     color: black !important;
-}
-
-@keyframes Hover-Category-Button {
-    from {
-        background: white;
-        color: black;
-    }
-    to {
-        background-color: black;
-        color: white !important;
-    }
+    background-color: transparent !important;
+    transition: background-color 0.2s ease, color 0.2s ease !important;
 }
 
 .profileCategoryButton:hover {
-    animation: Hover-Category-Button 0.2s forwards;
+    background-color: black !important;
+    color: white !important;
 }
