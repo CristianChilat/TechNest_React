@@ -6,7 +6,8 @@ import Paper from '@mui/material/Paper';
 import Slider from '@mui/material/Slider';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox'
+import Checkbox from '@mui/material/Checkbox';
+
 
 const Item = styled(Paper)(({ theme }) => ({
 	backgroundColor: '#fff',
@@ -50,11 +51,36 @@ function valuetext(value) {
 	return `${value}$`;
 }
 
-function ProductsFilter() {
-	const [value, setValue] = React.useState([0, 2000]);
+function ProductsFilter({ filters, onFilterChange }) {
+	const handlePriceChange = (event, newValue) => {
+		onFilterChange({ ...filters, priceRange: newValue });
+	};
 
-	const handleChange = (event, newValue) => {
-		setValue(newValue);
+	const handleCategoryChange = (category) => {
+		const newCategories = filters.categories.includes(category)
+			? filters.categories.filter(c => c !== category)
+			: [...filters.categories, category];
+		onFilterChange({ ...filters, categories: newCategories });
+	};
+
+	const handleBrandChange = (brand) => {
+		const newBrands = filters.brands.includes(brand)
+			? filters.brands.filter(b => b !== brand)
+			: [...filters.brands, brand];
+		onFilterChange({ ...filters, brands: newBrands });
+	};
+
+	const handleInStockChange = (checked) => {
+		onFilterChange({ ...filters, inStock: checked });
+	};
+
+	const handleReset = () => {
+		onFilterChange({
+			inStock: false,
+			priceRange: [0, 2000],
+			categories: [],
+			brands: []
+		});
 	};
 
 	return (
@@ -76,7 +102,7 @@ function ProductsFilter() {
 					}}
 				>
 					<div className={styles.label}>Filters</div>
-					<div className={styles.resetButton}>Reset</div>
+					<div className={styles.resetButton} onClick={handleReset}>Reset</div>
 				</Item>
 				<Item
 					sx={{
@@ -89,12 +115,17 @@ function ProductsFilter() {
 					}}
 				>
 					<div className={[styles.priceRangeLabel, styles.label].join(' ')}>Price range</div>
-					<div className={styles.resetButton}>Reset</div>
+					<div 
+						className={styles.resetButton}
+						onClick={() => onFilterChange({ ...filters, priceRange: [0, 2000] })}
+					>
+						Reset
+					</div>
 					<div className={styles.sliderContainer}>
 						<Slider
 							getAriaLabel={() => 'Price range'}
-							value={value}
-							onChange={handleChange}
+							value={filters.priceRange}
+							onChange={handlePriceChange}
 							valueLabelDisplay="auto"
 							getAriaValueText={valuetext}
 							marks={marks}
@@ -112,8 +143,17 @@ function ProductsFilter() {
 					</div>
 					<div>
 						<FormGroup>
-							{categories.map((brand, index) => (
-								<FormControlLabel control={<Checkbox />} label={brand} key={index} />
+							{categories.map((category, index) => (
+								<FormControlLabel 
+									control={
+										<Checkbox 
+											checked={filters.categories.includes(category)}
+											onChange={() => handleCategoryChange(category)}
+										/>
+									} 
+									label={category} 
+									key={index} 
+								/>
 							))}
 						</FormGroup>
 					</div>
@@ -125,7 +165,16 @@ function ProductsFilter() {
 					<div>
 						<FormGroup>
 							{brands.map((brand, index) => (
-								<FormControlLabel control={<Checkbox />} label={brand} key={index} />
+								<FormControlLabel 
+									control={
+										<Checkbox 
+											checked={filters.brands.includes(brand)}
+											onChange={() => handleBrandChange(brand)}
+										/>
+									} 
+									label={brand} 
+									key={index} 
+								/>
 							))}
 						</FormGroup>
 					</div>
@@ -134,7 +183,11 @@ function ProductsFilter() {
 					<div className={styles.label}>
 						Availability
 					</div>
-					<FormControlLabel control={<Checkbox />} label="In stock only" />
+					<FormControlLabel 
+						onChange={(e) => handleInStockChange(e.target.checked)} 
+						control={<Checkbox checked={filters.inStock} />} 
+						label="In stock only" 
+					/>
 				</Item>
 			</Stack>
 		</div>

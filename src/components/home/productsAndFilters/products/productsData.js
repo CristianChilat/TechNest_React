@@ -8,6 +8,7 @@ const products = [
 		reviews: 256,
 		image: "https://images.unsplash.com/photo-1606625000171-fa7d471da28c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnYW1pbmclMjBsYXB0b3AlMjBjb21wdXRlcnxlbnwxfHx8fDE3NjA2MDkwODJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
 		category: "Computer Components",
+		brand: "TechCorp", // Added
 		inStock: false,
 		isNew: true,
 		discount: 19
@@ -21,6 +22,7 @@ const products = [
 		reviews: 432,
 		image: "https://images.unsplash.com/photo-1675953935267-e039f13ddd79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFydHBob25lJTIwbW9iaWxlJTIwcGhvbmV8ZW58MXx8fHwxNzYwNjQ4NzcxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
 		category: "Phones & Tablets",
+		brand: "SmartDevices", // Added
 		inStock: true,
 		isNew: true,
 		discount: 10
@@ -34,6 +36,7 @@ const products = [
 		reviews: 789,
 		image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aXJlbGVzcyUyMGhlYWRwaG9uZXN8ZW58MXx8fHwxNzYwNjU5NzkwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
 		category: "Audio & Video",
+		brand: "AudioMax", // Added
 		inStock: true,
 		discount: 24
 	},
@@ -45,6 +48,7 @@ const products = [
 		reviews: 543,
 		image: "https://images.unsplash.com/photo-1728439652771-a27b8e851489?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21wdXRlciUyMGtleWJvYXJkJTIwcmdifGVufDF8fHx8MTc2MDY4ODQ1Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
 		category: "Gaming",
+		brand: "GamerPro", // Added
 		inStock: true,
 		isNew: true
 	},
@@ -56,6 +60,7 @@ const products = [
 		reviews: 312,
 		image: "https://images.unsplash.com/photo-1658673847785-08f1738116f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmFwaGljcyUyMGNhcmQlMjBncHV8ZW58MXx8fHwxNzYwNjg4NDUzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
 		category: "Computer Components",
+		brand: "TechCorp", // Added
 		inStock: false
 	},
 	{
@@ -67,6 +72,7 @@ const products = [
 		reviews: 876,
 		image: "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFydCUyMHdhdGNofGVufDF8fHx8MTc2MDU5ODEwNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
 		category: "Phones & Tablets",
+		brand: "SmartDevices", // Added
 		inStock: true,
 		discount: 11
 	},
@@ -78,6 +84,7 @@ const products = [
 		reviews: 234,
 		image: "https://images.unsplash.com/photo-1672239069328-dd1535c0d78a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0YWJsZXQlMjBkZXZpY2V8ZW58MXx8fHwxNzYwNjQ0NTM4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
 		category: "Phones & Tablets",
+		brand: "SmartDevices", // Added
 		inStock: true,
 		isNew: true
 	},
@@ -90,6 +97,7 @@ const products = [
 		reviews: 456,
 		image: "https://images.unsplash.com/photo-1611648694931-1aeda329f9da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21wdXRlciUyMG1vbml0b3J8ZW58MXx8fHwxNzYwNjg4NDU0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
 		category: "Computer Components",
+		brand: "TechCorp", // Added
 		inStock: true,
 		discount: 25
 	},
@@ -101,6 +109,7 @@ const products = [
 		reviews: 623,
 		image: "https://images.unsplash.com/photo-1628832307345-7404b47f1751?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnYW1pbmclMjBtb3VzZXxlbnwxfHx8fDE3NjA2MDkwODR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
 		category: "Gaming",
+		brand: "GamerPro", // Added
 		inStock: true
 	},
 	{
@@ -110,8 +119,9 @@ const products = [
 		originalPrice: 159,
 		rating: 4.5,
 		reviews: 345,
-		image: "https://images.unsplash.com/photo-1674303324806-7018a739ed11?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aXJlbGVzcyUyMHNwZWFrZXJ8ZW58MXx8fHwxNzYwNjQyNTMzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+		image: "https://images.unsplash.com/photo-1674303324806-7018a739ed11?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aXJlbGVzcyUyMGNwZWFrZXJ8ZW58MXx8fHwxNzYwNjQyNTMzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
 		category: "Audio & Video",
+		brand: "AudioMax", // Added
 		inStock: true,
 		discount: 19
 	},
@@ -123,6 +133,7 @@ const products = [
 		reviews: 198,
 		image: "https://images.unsplash.com/photo-1740803292819-db75045edc05?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBtYWtlciUyMGFwcGxpYW5jZXxlbnwxfHx8fDE3NjA2ODg0NTR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
 		category: "Household Appliances",
+		brand: "HomeComfort", // Added
 		inStock: true,
 		isNew: true
 	},
@@ -135,6 +146,7 @@ const products = [
 		reviews: 567,
 		image: "https://images.unsplash.com/photo-1558317374-067fb5f30001?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyb2JvdCUyMHZhY3V1bXxlbnwxfHx8fDE3NjA2MDQ0MzB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
 		category: "Household Appliances",
+		brand: "HomeComfort", // Added
 		inStock: true,
 		discount: 22
 	}

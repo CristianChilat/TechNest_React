@@ -7,17 +7,23 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import StarIcon from '@mui/icons-material/Star';
-import productsData from "./productsData";
 
-function Products() {
+function Products({ filteredProducts }) {
 	return (
 		<div className={styles.productsContainer}>
 			<div className={styles.labelAndCountItemsContainer}>
 				<div>All products</div>
 			</div>
 			<div>
-				<Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-					{productsData.map((product, index) => (
+				<Grid
+					container
+					spacing={{ xs: 2, md: 3 }}
+					columns={{ xs: 4, sm: 8, md: 12 }}
+					sx={{
+						width: '100%',
+					}}
+				>
+					{filteredProducts.map((product, index) => (
 						<Grid key={index} size={{ xs: 10, sm: 10, md: 4 }}>
 							<Card
 								sx={{

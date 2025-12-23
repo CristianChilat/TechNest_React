@@ -23,9 +23,3 @@ section {
 .content {
     flex: 1;
 }
-
-.productsAndFilterContainer {
-    display: flex;
-    flex-direction: row;
-    gap: 3em;
-}

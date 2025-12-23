@@ -2,7 +2,6 @@ import styles from './profile.module.css';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 
-
 function Profile() {
 	return (
 		<section className={styles.profileContainer}>
