@@ -33,3 +33,9 @@
     display: flex;
     justify-content: center;
 }
+
+@media (max-width: 900px) {
+    .filterContainer {
+        padding: 2em;
+    }
+}

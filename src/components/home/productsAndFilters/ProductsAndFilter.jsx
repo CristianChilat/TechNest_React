@@ -5,6 +5,7 @@ import {useState} from "react";
 import products from './products/productsData'
 
 function ProductsAndFilter() {
+
 	const [filters, setFilters] = useState({
 		inStock: null,
 		priceRange: [0, 2000],

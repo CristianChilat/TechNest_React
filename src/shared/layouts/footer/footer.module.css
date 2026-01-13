@@ -142,3 +142,11 @@ footer {
 .copyRightText {
     opacity: 0.6;
 }
+
+@media (max-width: 900px) {
+    .mainContentContainer {
+        flex-direction: column;
+        gap: 2em;
+        align-items: center;
+    }
+}

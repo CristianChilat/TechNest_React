@@ -3,3 +3,9 @@
     flex-direction: row;
     gap: 2em;
 }
+
+@media (max-width: 900px) {
+    .productsAndFilterContainer {
+        flex-direction: column;
+    }
+}

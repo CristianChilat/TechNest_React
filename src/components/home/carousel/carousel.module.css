@@ -7,9 +7,6 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-.viewport {
-}
-
 .slideContainer {
     display: flex;
     backface-visibility: hidden;
@@ -33,6 +30,7 @@
 
 .controlButton {
     background: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
     border: none;
     padding: 0;
     text-align: center;
@@ -57,4 +55,30 @@
 .nextButton {
     right: 2.5%;
     transform: translateY(-50%) translateX(50%);
+}
+
+@media (max-width: 900px) {
+    .slide {
+        flex: 0 0 100%;
+    }
+
+    .carouselContainer {
+     padding: 0.5em;
+    }
+
+    .controlButton {
+        font-size: 1.5em;
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    .prevButton {
+        left: 3%;
+        transform: translateY(-50%) translateX(0);
+    }
+
+    .nextButton {
+        right: 3%;
+        transform: translateY(-50%) translateX(0);
+    }
 }

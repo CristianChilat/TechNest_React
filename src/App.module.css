@@ -23,3 +23,9 @@ section {
 .content {
     flex: 1;
 }
+
+@media (max-width: 900px) {
+    section {
+        width: 90%;
+    }
+}

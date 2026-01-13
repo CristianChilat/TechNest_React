@@ -7,8 +7,13 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import StarIcon from '@mui/icons-material/Star';
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 function Products({ filteredProducts }) {
+	const theme = useTheme();
+	const matches = useMediaQuery(theme.breakpoints.down('md'));
+
 	return (
 		<div className={styles.productsContainer}>
 			<div className={styles.labelAndCountItemsContainer}>
@@ -18,16 +23,24 @@ function Products({ filteredProducts }) {
 				<Grid
 					container
 					spacing={{ xs: 2, md: 3 }}
-					columns={{ xs: 4, sm: 8, md: 12 }}
+					columns={{ 
+						xs: 4, 
+						sm: 8, 
+						md: filteredProducts.length === 1 ? 4 : filteredProducts.length === 2 ? 8 : 12 
+					}}
 					sx={{
 						width: '100%',
 					}}
 				>
 					{filteredProducts.map((product, index) => (
-						<Grid key={index} size={{ xs: 10, sm: 10, md: 4 }}>
+						<Grid key={index} size={{ xs: 2, sm: 4, md: 4 }}>
 							<Card
 								sx={{
 									position: 'relative',
+									minWidth: matches ? '140px' : '280px',
+									maxWidth: matches ? '200px' : '400px',
+									height: '100%',
+									margin: '0 auto',
 								}}
 								className={!product.inStock ? styles.disabledProduct : styles.activeProduct}
 							>
