@@ -33,12 +33,12 @@ function Products({ filteredProducts }) {
 					}}
 				>
 					{filteredProducts.map((product, index) => (
-						<Grid key={index} size={{ xs: 2, sm: 4, md: 4 }}>
+						<Grid key={index} size={{ xs: 4, sm: 4, md: 4 }}>
 							<Card
 								sx={{
 									position: 'relative',
 									minWidth: matches ? '140px' : '280px',
-									maxWidth: matches ? '200px' : '400px',
+									maxWidth: matches ? '100%' : '400px',
 									height: '100%',
 									margin: '0 auto',
 								}}

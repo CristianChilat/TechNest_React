@@ -108,6 +108,7 @@ function ProductsFilter({filters, onFilterChange}) {
 			sx={{
 				justifyContent: "flex-start",
 				alignItems: "stretch",
+				padding: !matches ? 0 : '2em'
 			}}
 		>
 			<Item
